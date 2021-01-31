@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Validate Json Placeholder API tests" verbose="1" >
+   
+   <test name="Validate response with count of objects with company name ending in Group" >
+    	<parameter name = "companyName" value="Group"/>
+    	<parameter name = "count" value="2"/>
+        <classes>
+            <class name="test.java.JsonTestCaseSteps" >
+            	<methods>
+        			<include name="getObjectCount"/>        
+      			</methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Validate response code and response time" >
+        <classes>
+            <class name="test.java.JsonTestCaseSteps" >
+            	<methods>
+        			<include name="validateResponse"/>        
+      			</methods>
+            </class>
+        </classes>
+    </test>    
+</suite>
+
