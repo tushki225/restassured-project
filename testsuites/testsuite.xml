@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Validate Json Placeholder API tests" verbose="1" >
+   
+   <test name="Search for an user existence" >
+    	<parameter name = "username" value="Delphine"/>
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+        			<include name="checkUserExistence"/>        
+      			</methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Search for posts written by specific user" >
+    	<parameter name = "username" value="Delphine"/>
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+        			<include name="searchPostsByUser"/>        
+      			</methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Fetch comments for each post and validate email" >
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+        			<include name="fetchCommentsAndValidateEmail"/>        
+      			</methods>
+            </class>
+        </classes>
+    </test>
+      
+</suite>
+
