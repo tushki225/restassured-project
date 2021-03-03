@@ -1,0 +1,5 @@
+test\scenarios\UserTestSteps.class
+test\config\Config.class
+test\utils\Constants.class
+test\pages\TestUserObject.class
+test\utils\RestUtils.class

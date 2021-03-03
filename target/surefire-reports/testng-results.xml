@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="77" total="88" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Validate Json Placeholder API tests" duration-ms="106829" started-at="2021-03-03T18:37:45Z" finished-at="2021-03-03T18:39:32Z">
+    <groups>
+    </groups>
+    <test name="Search for an user existence" duration-ms="40145" started-at="2021-03-03T18:37:45Z" finished-at="2021-03-03T18:38:26Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@2c34f934]" name="readPropertiesFile" is-config="true" duration-ms="73" started-at="2021-03-03T19:37:45Z" finished-at="2021-03-03T19:37:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@2c34f934]" name="setup" is-config="true" duration-ms="11941" started-at="2021-03-03T19:37:45Z" finished-at="2021-03-03T19:37:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkUserExistence(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@2c34f934]" name="checkUserExistence" duration-ms="28018" started-at="2021-03-03T19:37:57Z" finished-at="2021-03-03T19:38:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delphine]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f2606b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkUserExistence -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@2c34f934]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-03-03T19:38:25Z" finished-at="2021-03-03T19:38:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Search for an user existence -->
+    <test name="Search for posts written by specific user" duration-ms="1850" started-at="2021-03-03T18:38:26Z" finished-at="2021-03-03T18:38:28Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@3d299e3]" name="readPropertiesFile" is-config="true" duration-ms="8" started-at="2021-03-03T19:38:26Z" finished-at="2021-03-03T19:38:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@3d299e3]" name="setup" is-config="true" duration-ms="5" started-at="2021-03-03T19:38:26Z" finished-at="2021-03-03T19:38:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="searchPostsByUser(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@3d299e3]" name="searchPostsByUser" duration-ms="1831" started-at="2021-03-03T19:38:26Z" finished-at="2021-03-03T19:38:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delphine]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@459f7aa3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPostsByUser -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@3d299e3]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-03-03T19:38:28Z" finished-at="2021-03-03T19:38:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Search for posts written by specific user -->
+    <test name="Fetch comments for each post and validate email" duration-ms="51563" started-at="2021-03-03T18:38:28Z" finished-at="2021-03-03T18:39:19Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@21507a04]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2021-03-03T19:38:28Z" finished-at="2021-03-03T19:38:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@21507a04]" name="setup" is-config="true" duration-ms="2" started-at="2021-03-03T19:38:28Z" finished-at="2021-03-03T19:38:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="fetchCommentsAndValidateEmail(org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@21507a04]" name="fetchCommentsAndValidateEmail" duration-ms="51531" started-at="2021-03-03T19:38:28Z" finished-at="2021-03-03T19:39:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@376af784]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchCommentsAndValidateEmail -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@21507a04]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-03-03T19:39:19Z" finished-at="2021-03-03T19:39:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Fetch comments for each post and validate email -->
+    <test name="Create Posts with valid information" duration-ms="2412" started-at="2021-03-03T18:39:19Z" finished-at="2021-03-03T18:39:22Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@f2f2cc1]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:19Z" finished-at="2021-03-03T19:39:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@f2f2cc1]" name="setup" is-config="true" duration-ms="2" started-at="2021-03-03T19:39:19Z" finished-at="2021-03-03T19:39:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="createPost(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@f2f2cc1]" name="createPost" duration-ms="2406" started-at="2021-03-03T19:39:19Z" finished-at="2021-03-03T19:39:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[createPost.json]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7848321e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPost -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@f2f2cc1]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Create Posts with valid information -->
+    <test name="Delete Post with given id" duration-ms="703" started-at="2021-03-03T18:39:22Z" finished-at="2021-03-03T18:39:22Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@6156496]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@6156496]" name="setup" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="deletePost(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@6156496]" name="deletePost" duration-ms="698" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[101]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7bf65e0f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePost -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@6156496]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Delete Post with given id -->
+    <test name="Get all todos and for specific user" duration-ms="2457" started-at="2021-03-03T18:39:22Z" finished-at="2021-03-03T18:39:25Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@2b6856dd]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@2b6856dd]" name="setup" is-config="true" duration-ms="2" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getallTodos(org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@2b6856dd]" name="getallTodos" duration-ms="1469" started-at="2021-03-03T19:39:22Z" finished-at="2021-03-03T19:39:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3eec8583]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getallTodos -->
+        <test-method status="PASS" signature="getTodosForUser(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@2b6856dd]" name="getTodosForUser" duration-ms="973" started-at="2021-03-03T19:39:24Z" finished-at="2021-03-03T19:39:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delphine]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@3eec8583]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTodosForUser -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@2b6856dd]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:25Z" finished-at="2021-03-03T19:39:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Get all todos and for specific user -->
+    <test name="Get all photos and for specific album id" duration-ms="5772" started-at="2021-03-03T18:39:25Z" finished-at="2021-03-03T18:39:31Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@327b636c]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:25Z" finished-at="2021-03-03T19:39:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@327b636c]" name="setup" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:25Z" finished-at="2021-03-03T19:39:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getallPhotos(org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@327b636c]" name="getallPhotos" duration-ms="5336" started-at="2021-03-03T19:39:25Z" finished-at="2021-03-03T19:39:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f7cd50e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getallPhotos -->
+        <test-method status="PASS" signature="getPhotosForSpecificAlbum(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@327b636c]" name="getPhotosForSpecificAlbum" duration-ms="430" started-at="2021-03-03T19:39:30Z" finished-at="2021-03-03T19:39:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@5f7cd50e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPhotosForSpecificAlbum -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@327b636c]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:31Z" finished-at="2021-03-03T19:39:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Get all photos and for specific album id -->
+    <test name="Get all albums and for specific user" duration-ms="1439" started-at="2021-03-03T18:39:31Z" finished-at="2021-03-03T18:39:32Z">
+      <class name="test.scenarios.UserTestSteps">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:test.scenarios.UserTestSteps@19d37183]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2021-03-03T19:39:31Z" finished-at="2021-03-03T19:39:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.scenarios.UserTestSteps@19d37183]" name="setup" is-config="true" duration-ms="12" started-at="2021-03-03T19:39:31Z" finished-at="2021-03-03T19:39:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getallAlbums(org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@19d37183]" name="getallAlbums" duration-ms="490" started-at="2021-03-03T19:39:31Z" finished-at="2021-03-03T19:39:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@67f591c2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getallAlbums -->
+        <test-method status="PASS" signature="getAlbumsForSpecificUser(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.scenarios.UserTestSteps@19d37183]" name="getAlbumsForSpecificUser" duration-ms="930" started-at="2021-03-03T19:39:31Z" finished-at="2021-03-03T19:39:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delphine]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@67f591c2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAlbumsForSpecificUser -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:test.scenarios.UserTestSteps@19d37183]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-03-03T19:39:32Z" finished-at="2021-03-03T19:39:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.scenarios.UserTestSteps -->
+    </test> <!-- Get all albums and for specific user -->
+  </suite> <!-- Validate Json Placeholder API tests -->
+</testng-results>
