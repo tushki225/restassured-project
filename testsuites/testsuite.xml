@@ -1,7 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Validate Json Placeholder API tests" verbose="1" >   
-   <test name="Search for an user existence" >
+   
+  	<test name="Search for an user existence" >
     	<parameter name = "username" value="Delphine"/>
         <classes>
             <class name="test.scenarios.UserTestSteps" >
@@ -31,7 +32,67 @@
       			</methods>
             </class>
         </classes>
+    </test>   
+    
+    <!--Test cases added for additional test coverage. Starts here  -->
+    
+    <test name="Create Posts with valid information" >
+    	<parameter name = "fileName" value="createPost.json"/>
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+        			<include name="createPost"/>        
+      			</methods>
+            </class>
+        </classes>
     </test>
+    
+    <test name="Delete Post with given id" >
+    	<parameter name = "id" value="101"/>
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+        			<include name="deletePost"/>        
+      			</methods>
+            </class>
+        </classes>
+    </test>   
+    
+    <test name="Get all todos and for specific user" >
+    	<parameter name = "username" value="Delphine"/>
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+            		<include name="getallTodos"/>
+        			<include name="getTodosForUser"/>        
+      			</methods>
+            </class>
+        </classes>
+    </test> 
+    
+    <test name="Get all photos and for specific album id" >
+    	<parameter name = "albumId" value="10"/>
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+        			<include name="getallPhotos"/>
+        			<include name="getPhotosForSpecificAlbum"/>       
+      			</methods>
+            </class>
+        </classes>
+    </test>  
+    
+    <test name="Get all albums and for specific user" >
+    	<parameter name = "username" value="Delphine"/>
+        <classes>
+            <class name="test.scenarios.UserTestSteps" >
+            	<methods>
+        			<include name="getallAlbums"/>
+        			<include name="getAlbumsForSpecificUser"/>       
+      			</methods>
+            </class>
+        </classes>
+    </test>        
       
 </suite>
 

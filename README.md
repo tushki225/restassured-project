@@ -1,17 +1,24 @@
-# 1.2. API automation test
-Write a test to retrieve JSON data from a REST API and validate the response. Please use the following API: https://jsonplaceholder.typicode.com
+# API automation test
 
-# Scenario:
-1. Do `GET` request to `/users` endpoint.
-	* Validate the response code to be `200`;
-	* Validate the response time to be less than `2000 ms`
-2. Given received response with user objects:
-	* Validate that count of objects that have company name ending in `Group` is `2` 
+For this task, imagine you are a part of the team that performs quality assurance for a user blog, the frontend design is not yet developed, but the API has already been published here:
+
+https://jsonplaceholder.typicode.com
+
+# Scenarios
+1. Search for the user with username “Delphine”.
+2. Use the details fetched to make a search for the posts written by the user.
+3. For each post, fetch the comments and validate if the emails in the comment section are in the proper format.
+4. Think of various scenarios for the test workflow, all the things that can go wrong. Add them to test coverage 
 
 # Steps to execute	
-1. Make sure to have Eclipse Java IDE, Maven and Java 8 or above on you local computer 
-2. Clone the repository in IDE 
-	(https://github.com/tushki225/restassured-raisin.git)
-3. Right click pom.xml and select Maven-->Update Project. This will install all dependencies
-4. Right click project-->Select Build Path-->Click Add Libraries. Select TestNg, then click Next and then Finish.
-5. Right click testsuite.xml (testcase-->testsuite.xml) and Run As--> TestNg Suite
+1. Make sure to have Maven, Git and Java 8(or above) on you local computer 
+2. Clone the repository on your local machine using git	
+	(https://github.com/tushki225/restassured-project.git)
+	
+3. You can run the project in 2 different ways as mentioned below-
+
+    a) Command Prompt. Open the project folder in command prompt and run 'mvn test'
+    
+    b) Eclipse. Make sure to have TestNg plugin added to Eclipse. Import as Maven Project. 
+    Update project by right click pom.xml and update it.Right click testsuite.xml (testsuites-->testsuite.xml) 
+    and Run As--> TestNg Suite
