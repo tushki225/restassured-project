@@ -1,7 +1,6 @@
 package test.config;
 
-import com.jayway.restassured.http.ContentType;
-
+import io.restassured.http.ContentType;
 import test.utils.Constants;
 import test.utils.RestUtils;
 import java.io.FileReader;
@@ -12,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 public class Config {
 	public String baseUri=null;
 	public String basePath=null;
-	public String usersURI=null;	
+	public String usersURI=null;
 	public String userPostsURI=null;
 	public String todosURI=null;
 	public String photosURI=null;
@@ -20,11 +19,13 @@ public class Config {
 	
 	@BeforeClass 
 	public void readPropertiesFile (){ 
-		try { 
-			FileReader reader=new FileReader(Constants.PROPERTIES_FILE_PATH); 
-			Properties prop=new Properties();
-			prop.load(reader);
-			
+		try {
+			Properties prop;
+			try (FileReader reader = new FileReader(Constants.PROPERTIES_FILE_PATH)) {
+				prop = new Properties();
+				prop.load(reader);
+			}
+
 			this.baseUri= prop.getProperty(Constants.BASE_URI_IDENTIFIER); 
 			this.basePath= prop.getProperty(Constants.BASE_PATH_IDENTIFIER); 
 			this.usersURI= prop.getProperty(Constants.USER_URIPATH_IDENTIFIER);
@@ -34,7 +35,7 @@ public class Config {
 			this.albumsURI= prop.getProperty(Constants.ALBUMS_URIPATH_IDENTIFIER);
   
 		} catch (Exception e) { 
-		  e.printStackTrace(); 
+			e.getMessage();
 	  	}
 	}	 
 	

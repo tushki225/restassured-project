@@ -1,10 +1,8 @@
 package test.pages;
 
-import com.jayway.restassured.response.Response;
-
+import io.restassured.response.Response;
 import test.utils.Constants;
 import test.utils.RestUtils;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -23,7 +21,7 @@ public class TestUserObject {
     }	
 	
 	//Validate user existence from given response
-	public boolean validateUserExistence(Response response, String name) {    	   	
+	public boolean validateUserExistence(Response response, String name) {
     	List<Map<String, String>> users = response.jsonPath().getList(Constants.ALL);    	
     	for (int i = 0; i < users.size(); i++) {
     		if(users.get(i).get(Constants.USERNAME).equals(name)) {

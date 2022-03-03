@@ -1,21 +1,20 @@
 package test.utils;
 
-import com.jayway.restassured.RestAssured;
-import static com.jayway.restassured.RestAssured.get;
-import static com.jayway.restassured.RestAssured.given;
-import com.jayway.restassured.http.ContentType;
-import com.jayway.restassured.path.json.JsonPath;
-import com.jayway.restassured.response.Response;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class RestUtils {
-    
-	public static String path;
-    public static String jsonPathTerm;      
     
     //Sets Base URI
     public static void setBaseURI (String baseUri){
     	if(!baseUri.isEmpty())
-    		RestAssured.baseURI = baseUri;    	
+    		RestAssured.baseURI = baseUri;
     }
 
     //Sets base path
@@ -35,38 +34,48 @@ public class RestUtils {
 
     //Sets ContentType
     public static void setContentType (ContentType type){
-    	given().contentType(type);
+        RestAssured.given().contentType(type);
     }
     
     //Returns response
     public static Response getResponse() {
-        return get();
+        return RestAssured.get();
     }
 
     //Returns response by given path
     public static Response getResponsebyPath(String path) {
-        return get(path);
+        return RestAssured.get(path);
     }        
 	
     
     //Create Resource with request body
     public static Response createResource(String uri, String requestBody) {
-    	return given().contentType(Constants.APPLICATION_JSON).body(requestBody).when().post(uri);
+    	return RestAssured.given().contentType(Constants.APPLICATION_JSON).body(requestBody).when().post(uri);
     } 
     
     //Updates a Resource with request body
     public static Response updateResource(String uri, String requestBody) {
-    	return given().contentType(Constants.APPLICATION_JSON).body(requestBody).when().put(uri);
+    	return RestAssured.given().contentType(Constants.APPLICATION_JSON).body(requestBody).when().put(uri);
     }
     
     //Deletes a Resource
     public static Response deleteResource(String uri) {
-    	return given().contentType(Constants.APPLICATION_JSON).when().delete(uri);
+    	return RestAssured.given().contentType(Constants.APPLICATION_JSON).when().delete(uri);
     }
 
     //Returns JsonPath object
     public static JsonPath getJsonPath (Response res) {
         String json = res.asString();
         return new JsonPath(json);
+    }
+
+    public JSONObject getJsonParsed(String body) {
+        JSONParser parser = new JSONParser();
+        try {
+            return (JSONObject)parser.parse(body);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

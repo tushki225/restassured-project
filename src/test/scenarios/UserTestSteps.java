@@ -1,20 +1,18 @@
 package test.scenarios;
 
 import java.io.IOException;
-
+import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import com.jayway.restassured.response.Response;
-
 import test.config.Config;
 import test.pages.TestUserObject;
 import test.utils.Constants;
 
 public class UserTestSteps extends Config{
 	
-	public Response response = null; 
+	public Response response = null;
     TestUserObject testUserObj = new TestUserObject();
     
     @Test
